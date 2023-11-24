@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Список пользователей
+{% endblock %}
+
+{% block content %}
+
+    <div class='content col-xl-9 h-100'>
+        <h1 class='title'>Список пользователей</h1>
+        <ul class='users-list' id="js-list-container">
+            {% for user_list in users %}
+                <li>
+                    <a class='all-chats-list__item item' href='{% url "users:user_detail" user_list.id %}'>
+                        {{ user_list.username|truncatechars:50 }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+
+ 
+
+
+

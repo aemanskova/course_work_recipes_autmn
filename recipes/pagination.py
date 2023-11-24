@@ -1,0 +1,7 @@
+from rest_framework.pagination import PageNumberPagination
+
+class BasePagination(PageNumberPagination):  
+    page_size = 4
+
+class IngredientAmountPagination(PageNumberPagination):  
+    page_size = 10
