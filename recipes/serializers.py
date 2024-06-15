@@ -42,9 +42,6 @@ class RecipeSerializer(serializers.ModelSerializer):
         if cooking_time < 5:
             raise ValidationError('Минимальное время приготовления 5 минут!')
         return cooking_time
-      
-    
-  
 
 class IngredientAmountSerializer(serializers.ModelSerializer):
 
